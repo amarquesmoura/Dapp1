@@ -1,0 +1,19 @@
+{
+  "name": "Dapp1",
+  "private": true,
+  "version": "1.0.0",
+  "browserslist": [
+    "since 2017-06"
+  ],
+  "description": "Ethereum Dapp Exercise",
+  "scripts": {
+    "start": "npx parcel ./src/index.html --no-cache"
+  },
+  "author": "Andre Moura",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "web3": "^1.0.0-beta.46"
+  }
+}
