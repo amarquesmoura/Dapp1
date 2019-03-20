@@ -1,0 +1,151 @@
+{
+  "contracts": {
+    "Ballot": {
+      "address": "0xC92767c21df69a74948c0fb4c9169875481A13BE",
+      "constructorCode": "608060405234801561001057600080fd5b50610508806100206000396000f3fe",
+      "bodyBytecodeHash": "630fc76110736a775522d5a84a2adb7cf69a025bfc808ff955d782ac4b13dca1",
+      "localBytecodeHash": "c2b7ec1acb76f6db47ac704302eba9b27dd868aed1540b3cf49df69350aced17",
+      "deployedBytecodeHash": "c2b7ec1acb76f6db47ac704302eba9b27dd868aed1540b3cf49df69350aced17",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_struct<Ballot.Voter>": {
+          "id": "t_struct<Ballot.Voter>",
+          "kind": "struct",
+          "label": "Ballot.Voter",
+          "members": [
+            {
+              "label": "voted",
+              "astId": 13,
+              "type": "t_bool",
+              "src": "247:10:0"
+            }
+          ]
+        },
+        "t_mapping<t_struct<Ballot.Voter>>": {
+          "id": "t_mapping<t_struct<Ballot.Voter>>",
+          "valueType": "t_struct<Ballot.Voter>",
+          "label": "mapping(key => Ballot.Voter)",
+          "kind": "mapping"
+        },
+        "t_struct<Ballot.Proposal>": {
+          "id": "t_struct<Ballot.Proposal>",
+          "kind": "struct",
+          "label": "Ballot.Proposal",
+          "members": [
+            {
+              "label": "name",
+              "astId": 8,
+              "type": "t_bytes32",
+              "src": "176:12:0"
+            },
+            {
+              "label": "voteCount",
+              "astId": 10,
+              "type": "t_int256",
+              "src": "198:13:0"
+            }
+          ]
+        },
+        "t_bytes32": {
+          "id": "t_bytes32",
+          "kind": "elementary",
+          "label": "bytes32"
+        },
+        "t_int256": {
+          "id": "t_int256",
+          "kind": "elementary",
+          "label": "int256"
+        },
+        "t_array:dyn<t_struct<Ballot.Proposal>>": {
+          "id": "t_array:dyn<t_struct<Ballot.Proposal>>",
+          "valueType": "t_struct<Ballot.Proposal>",
+          "length": "dyn",
+          "kind": "array",
+          "label": "Ballot.Proposal[]"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 64,
+          "type": "t_bool",
+          "src": "757:24:1"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 66,
+          "type": "t_bool",
+          "src": "876:25:1"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 115,
+          "type": "t_array:50<t_uint256>",
+          "src": "1891:29:1"
+        },
+        {
+          "contract": "Ballot",
+          "path": "src/Contracts/Ballot.sol",
+          "label": "owner",
+          "astId": 6,
+          "type": "t_address",
+          "src": "121:20:0"
+        },
+        {
+          "contract": "Ballot",
+          "path": "src/Contracts/Ballot.sol",
+          "label": "voters",
+          "astId": 18,
+          "type": "t_mapping<t_struct<Ballot.Voter>>",
+          "src": "270:39:0"
+        },
+        {
+          "contract": "Ballot",
+          "path": "src/Contracts/Ballot.sol",
+          "label": "proposals",
+          "astId": 21,
+          "type": "t_array:dyn<t_struct<Ballot.Proposal>>",
+          "src": "316:27:0"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {},
+  "zosversion": "2.2",
+  "version": "0.1.0"
+}
