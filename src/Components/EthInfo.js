@@ -1,11 +1,14 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
+import { EthInfoContext } from "../state/context";
 
-const EthInfo = ({ accounts, balance }) => {
+const EthInfo = () => {
+  const ethInfo = useContext(EthInfoContext);
+  
   return (
     <div>
       <h1>My Eth Info</h1>
-      <p>Account: {accounts[0]}</p>
-      <p>Balance: {balance}</p>
+      <p>Account: {ethInfo.accounts[0]}</p>
+      <p>Balance: {ethInfo.balance}</p>
     </div>
   );
 };

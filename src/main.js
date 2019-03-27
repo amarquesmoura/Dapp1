@@ -1,19 +1,16 @@
 import React from "react";
 import { render } from "react-dom";
+import EthInfoContextProvider from "./state/context";
 import EthInfo from "./Components/EthInfo";
 
 import getWeb3 from "./utils/getWeb3";
 
 (async function() {
   const web3 = await getWeb3();
-  const accounts = await web3.eth.getAccounts();
-  let balance = await web3.eth.getBalance(accounts[0]);
-  balance = web3.utils.fromWei(balance, "ether");
-
   render(
-    <div>
-      <EthInfo accounts={accounts} balance={balance} />
-    </div>,
+    <EthInfoContextProvider web3={web3}>
+      <EthInfo />
+    </EthInfoContextProvider>,
     document.getElementById("root")
   );
 })();
